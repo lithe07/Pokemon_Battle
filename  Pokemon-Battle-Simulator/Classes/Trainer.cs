@@ -22,11 +22,14 @@ public class Trainer
 
     public string ReturnPokemon(int index)
     {
-        if (index < 0 || index >= Belt.Count)
+        try
         {
-            return $"Pokemon at is out of range.";
+            Belt[index].Close();
+            return $"Pokemon {index + 1 } at position has been returned.";
         }
-        Belt[index].Close();
-        return $"Pokemon {index + 1 } at position has been returned.";
+        catch (ArgumentOutOfRangeException)
+        {
+            return "Error: Index was out of range.";
+        }
     }
 }
