@@ -10,14 +10,16 @@ public class Trainer
         this.Belt = new List<Pokeball>();
     }
 
-    public string ThrowPokeball(int index)
+    public Pokemon ThrowPokeball(int index)
     {
         if (index < Belt.Count)
         {
             Pokemon pokemon = Belt[index].Open();
-            return $"{Name} heeft {pokemon.Nickname} vrijgelaten {pokemon.BattleCry()}";
+            // return $"{Name} heeft {pokemon.Nickname} vrijgelaten {pokemon.BattleCry()}";
+            return pokemon;
         }
-        return $"Pokemon is out";
+        // return $"Pokemon is out";
+        return Belt[0].Open();
     }
 
     public string ReturnPokemon(int index)

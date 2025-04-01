@@ -32,7 +32,7 @@ namespace Pokemon_Battle_Simulator.Classes
 
                 Console.WriteLine($"Welkom {trainers[0].Name} en {trainers[1].Name}! Laat het gevecht beginnen!\n");
                 Console.ReadKey();
-                
+
                 
 
                 // Het gevecht (6 rondes)
