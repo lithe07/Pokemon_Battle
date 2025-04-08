@@ -12,20 +12,20 @@ public class Round
         this.pokemon2 = pokemon2;
     }
 
-    public int startRound()
+    public Results startRound()
     {
         if (pokemon1.Strength == pokemon2.Strength)
-            return 0;
+            return Results.Draw;
 
         if ((pokemon1.Strength == "Fire" && pokemon2.Strength == "Grass") ||
             (pokemon1.Strength == "Grass" && pokemon2.Strength == "Water") ||
             (pokemon1.Strength == "Water" && pokemon2.Strength == "Fire"))
         {
-            return 1;
+            return Results.Win;
         }
         else
         {
-            return 2;
+            return Results.Lose;
         }
     }
 }
