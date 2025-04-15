@@ -15,10 +15,8 @@ public class Trainer
         if (index < Belt.Count)
         {
             Pokemon pokemon = Belt[index].Open();
-            // return $"{Name} heeft {pokemon.Nickname} vrijgelaten {pokemon.BattleCry()}";
             return pokemon;
         }
-        // return $"Pokemon is out";
         return Belt[0].Open();
     }
 

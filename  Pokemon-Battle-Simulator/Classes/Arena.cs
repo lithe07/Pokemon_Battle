@@ -17,11 +17,10 @@ public static class Arena
         return true;
     }
 
-    public static void setUpArena(Trainer trainer1, Trainer trainer2)
+    public static Battle setUpArena(Trainer trainer1, Trainer trainer2)
     {
         Battle fight = new Battle(trainer1, trainer2);
-        fight.startBattle();
-        fight.GetBattleResult();
+        return fight;
 
     }
 
