@@ -1,5 +1,4 @@
-﻿// === Program.cs ===
-using System;
+﻿using System;
 using System.Collections.Generic;
 
 namespace Pokemon_Battle_Simulator.Classes
