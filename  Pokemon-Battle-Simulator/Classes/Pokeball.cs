@@ -2,8 +2,8 @@ namespace Pokemon_Battle_Simulator.Classes;
 
 public class Pokeball
 {
-    public Pokemon Pokemon;
-    public bool HasCharmanderInside;
+    private readonly Pokemon Pokemon;
+    private bool HasCharmanderInside;
         
     public Pokeball(Pokemon pokemon)
     {
@@ -26,5 +26,15 @@ public class Pokeball
     public void Close()
     {
         HasCharmanderInside = true;
+    }
+
+    public Pokemon getPokemon()
+    {
+        return Pokemon;
+    }
+
+    public bool getHasCharmanderInside()
+    {
+        return HasCharmanderInside;
     }
 }

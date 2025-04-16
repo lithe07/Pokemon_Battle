@@ -2,9 +2,9 @@ namespace Pokemon_Battle_Simulator.Classes;
 
 public abstract class Pokemon
 {
-    public string Nickname;
-    public string Strength;
-    public string Weakness;
+    private readonly string Nickname;
+    private readonly string Strength;
+    private readonly string Weakness;
 
     public Pokemon(string nickname, string strength, string weakness)
     {
@@ -14,4 +14,19 @@ public abstract class Pokemon
     }
 
     public abstract string BattleCry();
+
+    public string getNickname()
+    {
+        return Nickname;
+    }
+
+    public string getStrength()
+    {
+        return Strength;
+    }
+
+    public string getWeakness()
+    {
+        return Weakness;
+    }
 }

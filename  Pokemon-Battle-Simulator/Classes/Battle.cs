@@ -16,11 +16,11 @@ namespace Pokemon_Battle_Simulator.Classes
         public string GetBattleResult()
         {
             if (trainer1Win > trainer2Win)
-                return $"\n{trainer1.Name} wint de battle met {trainer1Win} tegen {trainer2Win}!";
+                return $"\n{trainer1.getName()} wint de battle met {trainer1Win} tegen {trainer2Win}!";
             else if (trainer2Win > trainer1Win)
-                return $"\n{trainer2.Name} wint de battle met {trainer2Win} tegen {trainer1Win}!";
+                return $"\n{trainer2.getName()} wint de battle met {trainer2Win} tegen {trainer1Win}!";
             else
-                return "De battle eindigt in een gelijkspel!";
+                return "\nDe battle eindigt in een gelijkspel!";
         }
     }
 }

@@ -32,11 +32,11 @@ namespace Pokemon_Battle_Simulator.Classes
 
                     foreach (var poke in pokemons)
                     {
-                        trainers[i].Belt.Add(new Pokeball(poke));
+                        trainers[i].getBelt().Add(new Pokeball(poke));
                     }
                 }
 
-                Console.WriteLine($"Welkom {trainers[0].Name} en {trainers[1].Name}! Laat het gevecht beginnen!");
+                Console.WriteLine($"Welkom {trainers[0].getName()} en {trainers[1].getName()}! Laat het gevecht beginnen!");
                 Console.ReadKey();
 
                 Battle battle = new Battle(trainers[0], trainers[1]);
@@ -47,20 +47,20 @@ namespace Pokemon_Battle_Simulator.Classes
                     Pokemon p2 = trainers[1].ThrowPokeball(i);
 
                     Console.WriteLine($"\nRonde {i + 1} is begonnen!");
-                    Console.WriteLine($"{trainers[0].Name} roept zijn Pokémon: {p1.BattleCry()}");
-                    Console.WriteLine($"{trainers[1].Name} roept haar Pokémon: {p2.BattleCry()}");
+                    Console.WriteLine($"{trainers[0].getName()} roept zijn Pokémon: {p1.BattleCry()}");
+                    Console.WriteLine($"{trainers[1].getName()} roept haar Pokémon: {p2.BattleCry()}");
 
                     Round round = new Round(p1, p2);
                     Results result = round.startRound();
 
                     if (result == Results.Win)
                     {
-                        Console.WriteLine($"{trainers[0].Name} wint de ronde!");
+                        Console.WriteLine($"{trainers[0].getName()} wint de ronde!");
                         battle.trainer1Win++;
                     }
                     else if (result == Results.Lose)
                     {
-                        Console.WriteLine($"{trainers[1].Name} wint de ronde!");
+                        Console.WriteLine($"{trainers[1].getName()} wint de ronde!");
                         battle.trainer2Win++;
                     }
                     else
@@ -68,7 +68,7 @@ namespace Pokemon_Battle_Simulator.Classes
                         Console.WriteLine("Het is een gelijkspel in deze ronde!");
                     }
 
-                    Console.WriteLine($"{trainers[0].Name} en {trainers[1].Name} keren hun Pokémon terug.");
+                    Console.WriteLine($"{trainers[0].getName()} en {trainers[1].getName()} keren hun Pokémon terug.");
                     Console.ReadKey();
                 }
 

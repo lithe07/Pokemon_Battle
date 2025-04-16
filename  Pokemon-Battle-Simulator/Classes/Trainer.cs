@@ -2,8 +2,8 @@ namespace Pokemon_Battle_Simulator.Classes;
 
 public class Trainer
 {
-    public string Name;
-    public List<Pokeball> Belt;
+    private string Name;
+    private List<Pokeball> Belt;
     public Trainer(string name)
     {
         this.Name = name;
@@ -31,5 +31,15 @@ public class Trainer
         {
             return "Error: Index was out of range.";
         }
+    }
+
+    public string getName()
+    {
+        return Name;
+    }
+
+    public List<Pokeball> getBelt()
+    {
+        return Belt;
     }
 }

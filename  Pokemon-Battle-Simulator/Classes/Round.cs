@@ -14,12 +14,12 @@ public class Round
 
     public Results startRound()
     {
-        if (pokemon1.Strength == pokemon2.Strength)
+        if (pokemon1.getStrength() == pokemon2.getStrength())
             return Results.Draw;
 
-        if ((pokemon1.Strength == "Fire" && pokemon2.Strength == "Grass") ||
-            (pokemon1.Strength == "Grass" && pokemon2.Strength == "Water") ||
-            (pokemon1.Strength == "Water" && pokemon2.Strength == "Fire"))
+        if ((pokemon1.getStrength() == "Fire" && pokemon2.getStrength() == "Grass") ||
+            (pokemon1.getStrength() == "Grass" && pokemon2.getStrength() == "Water") ||
+            (pokemon1.getStrength() == "Water" && pokemon2.getStrength() == "Fire"))
         {
             return Results.Win;
         }
